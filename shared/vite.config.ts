@@ -1,7 +1,5 @@
 import { defineConfig } from "vite";
-import { extname, relative, resolve } from "path";
-import { fileURLToPath } from "url";
-import { glob } from "glob";
+import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 
@@ -11,8 +9,9 @@ export default defineConfig({
   build: {
     copyPublicDir: false,
     lib: {
-      entry: resolve(__dirname, "lib/shared.ts"),
+      entry: resolve(__dirname, "lib/index.ts"),
       formats: ["es"],
+      fileName: "index",
     },
     rollupOptions: {
       external: ["react", "react/jsx-runtime"],

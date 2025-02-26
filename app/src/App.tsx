@@ -1,11 +1,11 @@
-import { Button } from "@me/shared/shared";
+import { Button } from "@me/shared";
 
 function App() {
   return (
     <div>
       <div>App</div>
       <hr />
-      <Button label={"My Button"} />
+      <Button label={"My Button"} onClick={() => alert("clicked")} />
     </div>
   );
 }
