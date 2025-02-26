@@ -46,6 +46,7 @@ export const Button = (props: ButtonProps) => {
         borderRadius: "8px",
         ...computeButtonColors(variant),
         textTransform: "none",
+        cursor: "pointer",
       }}
     >
       {label}
