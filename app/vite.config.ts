@@ -6,11 +6,11 @@ import { fileURLToPath } from "url";
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    exclude: ["@me/shared"],
+    exclude: ["shared"],
   },
   resolve: {
     alias: {
-      "@me/shared": fileURLToPath(new URL("../shared/dist", import.meta.url)),
+      shared: fileURLToPath(new URL("../shared/lib/index.js", import.meta.url)),
     },
     preserveSymlinks: true,
   },

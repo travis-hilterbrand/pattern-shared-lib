@@ -1,4 +1,4 @@
-import { Button } from "@me/shared";
+import { Button } from "shared";
 
 function App() {
   return (
